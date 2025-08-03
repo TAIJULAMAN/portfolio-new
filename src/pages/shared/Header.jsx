@@ -21,15 +21,12 @@ export default function () {
                         <a href="/projects" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>projects
                         </a>
-                        <a href="#about-me" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        <a href="/about" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>about-me
                         </a>
-                        <a href="#contacts" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        <a href="/contacts" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>contacts
                         </a>
-                        <select className="bg-transparent text-white border-none outline-none">
-                            <option value="EN">EN</option>
-                        </select>
                     </div>
                 </nav>
             </div>

@@ -11,7 +11,6 @@ import Footer from '../shared/Footer';
 export default function HomePage() {
     return (
         <div className="min-h-screen bg-gray-900 text-white">
-            <Header />
             <main>
                 <Hero />
                 <Quote />
@@ -20,7 +19,6 @@ export default function HomePage() {
                 <About />
                 <Contacts />
             </main>
-            <Footer />
         </div>
     )
 }

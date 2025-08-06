@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaDiscord, FaFigma, FaGithub } from "react-icons/fa";
 
 export default function () {
@@ -12,21 +13,18 @@ export default function () {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        <a href="#home" className="text-white hover:text-purple-400 transition-colors">
+                        <Link to="/" className="text-white hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>home
-                        </a>
-                        <a href="#works" className="text-gray-400 hover:text-purple-400 transition-colors">
-                            <span className="text-purple-400">#</span>works
-                        </a>
-                        <a href="/projects" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        </Link>
+                        <Link to="/projects" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>projects
-                        </a>
-                        <a href="/about" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        </Link>
+                        <Link to="/about" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>about-me
-                        </a>
-                        <a href="/contacts" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        </Link>
+                        <Link to="/contacts" className="text-gray-400 hover:text-purple-400 transition-colors">
                             <span className="text-purple-400">#</span>contacts
-                        </a>
+                        </Link>
                     </div>
                 </nav>
             </div>

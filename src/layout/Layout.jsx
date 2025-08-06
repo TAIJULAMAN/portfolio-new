@@ -1,26 +1,14 @@
-
-import { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar/Sidebar";
-import MainHeader from "../components/MainHeader/MainHeader";
+import Header from "../pages/shared/Header";
 
 const Layout = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
     return (
-        <div className="flex h-screen">
-            {/* Sidebar */}
-            <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-
-            {/* Main Content */}
-            <div className="flex flex-col flex-1">
-                <MainHeader toggleSidebar={toggleSidebar} />
-                <main className="p-4 overflow-y-auto bg-bg h-[100vh]">
-                    <Outlet />
-                </main>
-            </div>
+        <div className="min-h-screen bg-gray-900 text-white">
+            <Header />
+            <main>
+                <Outlet />
+            </main>
         </div>
     );
 };

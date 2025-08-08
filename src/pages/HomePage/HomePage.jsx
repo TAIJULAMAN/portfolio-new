@@ -10,7 +10,7 @@ import Footer from '../shared/Footer';
 
 export default function HomePage() {
     return (
-        <div className="min-h-screen bg-gray-900 text-white">
+        <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
             <main>
                 <Hero />
                 <Quote />

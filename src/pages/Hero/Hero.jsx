@@ -1,7 +1,7 @@
 import React from 'react';
 export default function Hero() {
   return (
-    <section className="container mx-auto px-5 md:px-0 py-20">
+    <section className="container mx-auto px-5 md:px-0 py-10 md:py-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">

@@ -5,7 +5,7 @@ import { FaDiscord, FaFigma, FaGithub } from "react-icons/fa";
 export default function () {
     return (
         <header className="border-b border-gray-700">
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-5 md:px-0 py-4">
                 <nav className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                         <div className="w-4 h-4 border-2 border-purple-400"></div>
@@ -30,12 +30,12 @@ export default function () {
             </div>
 
             {/* Side navigation */}
-            <div className="fixed left-4 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col items-center space-y-4">
+            {/* <div className="fixed left-4 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col items-center space-y-4">
                 <div className="w-px h-32 bg-gray-600"></div>
                 <FaGithub className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
                 <FaDiscord className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
                 <FaFigma className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
+            </div> */}
         </header>
     )
 }

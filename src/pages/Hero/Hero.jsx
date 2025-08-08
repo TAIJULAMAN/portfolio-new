@@ -1,7 +1,7 @@
 import React from 'react';
 export default function Hero() {
   return (
-    <section id="home" className="container mx-auto px-4 py-20">
+    <section className="container mx-auto px-5 md:px-0 py-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -21,7 +21,6 @@ export default function Hero() {
         <div className="relative">
           <div className="relative z-10 flex justify-center">
             <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
-              {/* Replace 'profile.jpg' with your actual image filename */}
               <img
                 src="/aman.jpg"
                 alt="Aman's Profile"
@@ -33,12 +32,6 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
           </div>
-
-          {/* Status indicator */}
-          {/* <div className="absolute bottom-4 right-4 bg-gray-800 border border-purple-400 px-3 py-1 text-sm">
-            <span className="text-purple-400">◆</span> Currently working on{" "}
-            <span className="text-white font-semibold">Portfolio</span>
-          </div> */}
         </div>
       </div>
     </section>

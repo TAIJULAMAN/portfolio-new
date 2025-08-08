@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaDiscord, FaFigma, FaGithub } from "react-icons/fa";
+// import { FaDiscord, FaFigma, FaGithub } from "react-icons/fa";
 
-export default function () {
+export default function Header () {
     return (
         <header className="border-b border-gray-700">
             <div className="container mx-auto px-5 md:px-0 py-4">

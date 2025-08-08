@@ -47,13 +47,16 @@ export default function Header() {
 
     return (
         <>
+            {/* Overlay */}
             <div
-                className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}
+                className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-40 ${
+                    isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
                 onClick={toggleMenu}
+                aria-hidden="true"
             />
 
-            <header className="border-b border-gray-700 bg-gray-900/90 backdrop-blur-sm sticky top-0 z-50 overflow-hidden">
+            <header className="border-b border-gray-700 bg-gray-900/90 backdrop-blur-sm sticky top-0 z-50">
                 <div className="container mx-auto px-5 md:px-0 py-3">
                     <nav className="flex items-center justify-between">
                         <Link
@@ -98,9 +101,11 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Navigation - Side Menu */}
+                {/* Mobile Sidebar */}
                 <div
-                    className={`fixed top-0 left-0 h-screen w-64 bg-gray-900 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                        }`}
+                    className={`fixed top-0 left-0 h-screen w-64 bg-gray-900 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+                        isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                    }`}
                 >
                     <div className="h-full flex flex-col pt-24 px-6 space-y-4 overflow-y-auto">
                         {navLinks.map((link, index) => (

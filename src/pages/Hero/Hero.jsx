@@ -1,7 +1,7 @@
 import React from 'react';
 export default function Hero() {
-    return (
-        <section id="home" className="container mx-auto px-4 py-20">
+  return (
+    <section id="home" className="container mx-auto px-4 py-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -19,24 +19,18 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          {/* Decorative elements */}
-          {/* <div className="absolute top-0 right-0 w-16 h-16 border-2 border-gray-600"></div>
-          <div className="absolute top-8 right-8 w-16 h-16 border-2 border-gray-600"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-2 border-gray-600"></div> */}
-
-          {/* Dots pattern */}
-          {/* <div className="absolute top-20 right-20 grid grid-cols-5 gap-1">
-            {Array.from({ length: 25 }).map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-gray-600 rounded-full"></div>
-            ))}
-          </div> */}
-
-          {/* Main figure */}
           <div className="relative z-10 flex justify-center">
-            <div className="w-80 h-96 bg-gradient-to-b from-gray-700 to-gray-800 rounded-lg relative overflow-hidden">
-              {/* Hooded figure silhouette */}
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-600 to-gray-900"></div>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-white rounded-full opacity-20"></div>
+            <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
+              {/* Replace 'profile.jpg' with your actual image filename */}
+              <img
+                src="/aman.jpg"
+                alt="Aman's Profile"
+                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-purple-600 opacity-30 mix-blend-multiply" />
+              {/* Decorative border and overlay */}
+              <div className="absolute inset-0 border-4 border-purple-400/20 rounded-2xl m-2 transition-all duration-500 group-hover:border-purple-400/40 group-hover:m-1"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
           </div>
 
@@ -48,5 +42,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-    )
+  )
 }

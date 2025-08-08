@@ -2,26 +2,30 @@ import React from 'react';
 export default function Skills() {
     const skillCategories = [
         {
-          title: "Languages",
-          skills: ["TypeScript Lua", "Python JavaScript"],
+            title: "Languages",
+            skills: ["TypeScript", "JavaScript"],
         },
         {
-          title: "Databases",
-          skills: ["SQLite PostgreSQL", "Mongo"],
+            title: "Databases",
+            skills: ["MongoDB"],
         },
         {
-          title: "Tools",
-          skills: ["VSCode Neovim Linux", "Figma XFCE Arch", "git Font Awesome"],
+            title: "Tools",
+            skills: ["VSCode", "Figma", "Git", "Canva"],
         },
         {
-          title: "Other",
-          skills: ["HTML CSS EJS SCSS", "REST JinJa"],
+            title: "Other",
+            skills: ["HTML CSS Ant Design", "Tailwind CSS Bootstrap", "Material UI Shadcn UI"],
         },
         {
-          title: "Frameworks",
-          skills: ["React Vue", "Disnake Discord.js", "Flask Express.js"],
+            title: "Frameworks",
+            skills: ["Next.js", "Express.js", "Node.js"],
         },
-      ]
+        {
+            title: "Library",
+            skills: ["React"]
+        }
+    ]
     return (
         <section id="skills" className="container mx-auto px-4 py-16">
             <h2 className="text-3xl font-bold mb-12">
@@ -32,11 +36,6 @@ export default function Skills() {
                 {/* Decorative elements */}
                 <div className="hidden lg:block relative">
                     <div className="absolute top-0 left-0 w-16 h-16 border-2 border-gray-600"></div>
-                    <div className="absolute top-20 left-20 grid grid-cols-5 gap-1">
-                        {Array.from({ length: 25 }).map((_, i) => (
-                            <div key={i} className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                        ))}
-                    </div>
                     <div className="absolute bottom-0 right-0 w-24 h-24 border-2 border-gray-600"></div>
                 </div>
 

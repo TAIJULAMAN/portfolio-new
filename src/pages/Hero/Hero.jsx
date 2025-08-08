@@ -5,11 +5,13 @@ export default function Hero() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Elias is a <span className="text-purple-400">web designer</span> and{" "}
+            Aman is a <span className="text-purple-400">web designer</span> and{" "}
             <span className="text-purple-400">front-end developer</span>
           </h1>
 
-          <p className="text-gray-400 text-lg">He crafts responsive websites where technologies meet creativity</p>
+          <p className="text-gray-400 text-lg max-w-2xl">
+            I specialize in creating visually stunning, high-performance websites that not only look beautiful but also deliver seamless user experiences. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean, maintainable code and intuitive interfaces that engage users and drive results.
+          </p>
 
           <button className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
             Contact me !!
@@ -18,16 +20,16 @@ export default function Hero() {
 
         <div className="relative">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-16 h-16 border-2 border-gray-600"></div>
+          {/* <div className="absolute top-0 right-0 w-16 h-16 border-2 border-gray-600"></div>
           <div className="absolute top-8 right-8 w-16 h-16 border-2 border-gray-600"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-2 border-gray-600"></div>
+          <div className="absolute bottom-0 left-0 w-16 h-16 border-2 border-gray-600"></div> */}
 
           {/* Dots pattern */}
-          <div className="absolute top-20 right-20 grid grid-cols-5 gap-1">
+          {/* <div className="absolute top-20 right-20 grid grid-cols-5 gap-1">
             {Array.from({ length: 25 }).map((_, i) => (
               <div key={i} className="w-1 h-1 bg-gray-600 rounded-full"></div>
             ))}
-          </div>
+          </div> */}
 
           {/* Main figure */}
           <div className="relative z-10 flex justify-center">
@@ -39,10 +41,10 @@ export default function Hero() {
           </div>
 
           {/* Status indicator */}
-          <div className="absolute bottom-4 right-4 bg-gray-800 border border-purple-400 px-3 py-1 text-sm">
+          {/* <div className="absolute bottom-4 right-4 bg-gray-800 border border-purple-400 px-3 py-1 text-sm">
             <span className="text-purple-400">◆</span> Currently working on{" "}
             <span className="text-white font-semibold">Portfolio</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDiscord, FaEnvelope } from 'react-icons/fa';
+import { FaDiscord, FaEnvelope, FaPhone } from 'react-icons/fa';
 export default function Contacts() {
     return (
         <section id="contacts" className="container mx-auto px-4 py-16">
@@ -10,22 +10,21 @@ export default function Contacts() {
             <div className="grid lg:grid-cols-2 gap-12">
                 <div>
                     <p className="text-gray-400 mb-8">
-                        I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to
-                        contact me
+                        I am here for you around the clock, ready to support and propel your success to new heights. Reach out to me anytime, day or night, and let us collaborate to skyrocket our dreans!
                     </p>
                 </div>
 
                 <div className="space-y-4">
                     <div className="border border-gray-600 p-4">
-                        <h3 className="font-semibold mb-4">Message me here</h3>
+                        <h3 className="font-semibold mb-4">Contact me here</h3>
                         <div className="space-y-2">
                             <div className="flex items-center space-x-2">
-                                <FaDiscord className="w-4 h-4" />
-                                <span className="text-gray-400">!Elias#3519</span>
+                                <FaPhone className="w-4 h-4" />
+                                <span className="text-gray-400">01886606001</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <FaEnvelope className="w-4 h-4" />
-                                <span className="text-gray-400">elias@elias.me</span>
+                                <span className="text-gray-400">mdshahamanpatwary@gmail.com</span>
                             </div>
                         </div>
                     </div>

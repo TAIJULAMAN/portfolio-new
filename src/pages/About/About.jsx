@@ -1,7 +1,7 @@
 import React from 'react';
 export default function About() {
     return (
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-5 md:px-0 py-10 md:py-16 overflow-hidden">
             <h2 className="text-3xl font-bold mb-12">
                 <span className="text-purple-400">#</span>about-me
             </h2>

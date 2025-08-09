@@ -3,8 +3,8 @@ import { FaGithub, FaRegCopyright, FaWhatsapp, FaFacebook } from "react-icons/fa
 
 export default function () {
     return (
-        <footer className="border-t border-gray-700">
-            <div className="container mx-auto px-4 py-8">
+        <footer className="border-t border-gray-700 overflow-hidden">
+            <div className="container mx-auto px-5 md:px-0 py-10">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="flex items-center space-x-2 mb-4 md:mb-0">
                         <div className="w-4 h-4 border-2 border-purple-400"></div>

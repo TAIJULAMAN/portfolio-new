@@ -2,7 +2,7 @@ import React from 'react';
 import { FaDiscord, FaEnvelope, FaPhone } from 'react-icons/fa';
 export default function Contacts() {
     return (
-        <section id="contacts" className="container mx-auto px-4 py-16">
+        <section id="contacts" className="container mx-auto px-5 md:px-0 py-10 md:py-16 overflow-hidden">
             <h2 className="text-3xl font-bold mb-12">
                 <span className="text-purple-400">#</span>contacts
             </h2>

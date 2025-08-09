@@ -46,7 +46,7 @@ export default function Projects() {
                         <span className="text-purple-400">#</span>projects
                     </h2>
                     <a href="#" className="text-white hover:text-purple-400 transition-colors">
-                        View all &gt;
+                        View all ~~&gt;
                     </a>
                 </div>
                 <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

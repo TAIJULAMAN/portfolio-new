@@ -149,8 +149,7 @@ export default function ProjectsPage() {
 
     return (
         <div className="min-h-screen bg-gray-900 text-white">
-            <Header />
-            <main className="container mx-auto px-4 py-8">
+            <main className="container mx-auto px-5 md:px-0 py-10">
                 {/* Page Header */}
                 <div className="mb-12">
                     <h1 className="text-4xl font-bold text-white mb-2">
@@ -239,8 +238,8 @@ export default function ProjectsPage() {
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className={`px-4 py-2 text-sm border transition-all duration-200 hover:scale-105 ${button.type === "primary"
-                                                            ? "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:shadow-lg hover:shadow-purple-400/25"
-                                                            : "border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-black"
+                                                        ? "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:shadow-lg hover:shadow-purple-400/25"
+                                                        : "border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-black"
                                                         }`}
                                                 >
                                                     {button.label}
@@ -327,7 +326,6 @@ export default function ProjectsPage() {
                     ))}
                 </div>
             </main>
-           <Footer />
         </div>
     )
 }

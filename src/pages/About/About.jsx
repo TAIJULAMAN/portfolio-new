@@ -39,20 +39,20 @@ export default function About() {
 
                     {/* Figure illustration */}
                     <div className="relative">
-          <div className="relative z-10 flex justify-center">
-            <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
-              <img
-                src="/aman.jpg"
-                alt="Aman's Profile"
-                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-purple-600 opacity-30 mix-blend-multiply" />
-              {/* Decorative border and overlay */}
-              <div className="absolute inset-0 border-4 border-purple-400/20 rounded-2xl m-2 transition-all duration-500 group-hover:border-purple-400/40 group-hover:m-1"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            </div>
-          </div>
-        </div>
+                        <div className="relative z-10 flex justify-center">
+                            <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
+                                <img
+                                    src="/aman.jpg"
+                                    alt="Aman's Profile"
+                                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-purple-600 opacity-30 mix-blend-multiply" />
+                                {/* Decorative border and overlay */}
+                                <div className="absolute inset-0 border-4 border-purple-400/20 rounded-2xl m-2 transition-all duration-500 group-hover:border-purple-400/40 group-hover:m-1"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

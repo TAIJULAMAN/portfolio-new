@@ -13,7 +13,7 @@ export default function Hero() {
             I specialize in creating visually stunning, high-performance websites that not only look beautiful but also deliver seamless user experiences. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean, maintainable code and intuitive interfaces that engage users and drive results.
           </p>
 
-          <button className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
+          <button onClick={() => window.location.href = "/contacts"} className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
             Contact me !!
           </button>
         </div>

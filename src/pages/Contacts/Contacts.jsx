@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDiscord, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 export default function Contacts() {
     return (
         <section id="contacts" className="container mx-auto px-5 md:px-0 py-10 md:py-16 overflow-hidden">

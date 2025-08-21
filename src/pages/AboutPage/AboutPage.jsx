@@ -31,9 +31,22 @@ export default function AboutPage() {
         "I like pizza and pasta",
         "My favorite movie is Soldier Boy",
         "I am still learning",
-        "I want to be a full-stack developer",
-        "I love to play cricket"
-    ]
+        "I love to play cricket",
+        "I enjoy coding late at night",
+        "I prefer coffee over tea",
+        "I prefer beaches over mountains",
+        "I like listening to lo-fi music while coding",
+        "I am a night owl rather than an early bird",
+        "I believe in continuous self-improvement",
+        "I love designing creative UI components",
+        "I am passionate about frontend development",
+        "I love working on personal projects",
+        "I find debugging both challenging and fun",
+        "I prefer dark mode over light mode",
+        "I am fascinated by AI and machine learning",
+        "I love helping others through coding"
+    ];
+    
 
     return (
         <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
@@ -49,11 +62,11 @@ export default function AboutPage() {
                 {/* About Me Section */}
                 <section className="mb-20 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
-                        <div className="space-y-6">
-                            <p className="text-gray-400">Hello, i'm Aman!</p>
+                        <div className="space-y-4">
+                            <p className="text-gray-400">Hello, i'm MD SHAH AMAN PATWARY!</p>
 
                             <p className="text-gray-400">
-                                I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites. I specialize in building modern, user-friendly web experiences from the ground up—focusing on clean code, performance, and seamless user interaction.
+                                I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites. Currently, I thrive in my role at SparkTech Agency, where I help create intuitive, engaging interfaces that drive user satisfaction. This role not only honed my technical skills but also broadened my understanding of global standards in web development and the dynamics of remote collaboration.
                             </p>
 
                             <p className="text-gray-400">
@@ -112,7 +125,7 @@ export default function AboutPage() {
                         <span className="text-purple-400">#</span>my-fun-facts
                     </h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl">
+                    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-5">
                         {funFacts.map((fact, index) => (
                             <div
                                 key={index}

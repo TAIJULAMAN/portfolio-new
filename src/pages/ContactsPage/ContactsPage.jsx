@@ -1,5 +1,5 @@
 import React from "react"
-import { FaGithub, FaDiscord, FaFigma, FaTwitter, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaDiscord, FaFigma, FaTwitter, FaEnvelope, FaPhone, FaWhatsapp, FaFacebook } from "react-icons/fa"
 
 export default function ContactsPage() {
     return (
@@ -25,33 +25,25 @@ export default function ContactsPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
                         <div className="space-y-6">
                             <p className="text-gray-400 text-lg leading-relaxed">
-                                I'm interested in freelance opportunities. However, if you have other request or question, don't
-                                hesitate to contact me
+                                I am here for you around the clock, ready to support and propel your success to new heights. Reach out to me anytime, day or night, and let us collaborate to skyrocket our dreans!
                             </p>
                         </div>
 
-                        <div className="space-y-6">
-                            {/* Support Section */}
-                            <div className="border border-gray-600 bg-gray-800 p-6 hover:border-purple-400 transition-colors">
-                                <h3 className="font-semibold text-white mb-4">Support me here</h3>
-                                <p className="text-gray-400 font-mono text-sm">4149500120690030</p>
-                            </div>
-
-                            {/* Message Section */}
-                            <div className="border border-gray-600 bg-gray-800 p-6 hover:border-purple-400 transition-colors">
-                                <h3 className="font-semibold text-white mb-4">Message me here</h3>
-                                <div className="space-y-3">
-                                    <div className="flex items-center space-x-3">
-                                        <FaDiscord className="w-5 h-5 text-gray-400" />
-                                        <span className="text-gray-400">Elias#1234</span>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <FaEnvelope className="w-5 h-5 text-gray-400" />
-                                        <span className="text-gray-400">elias@elias-dev.ml</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                         <div className="space-y-4">
+                                            <div className="border border-gray-600 p-4">
+                                                <h3 className="font-semibold mb-4">Contact me here</h3>
+                                                <div className="space-y-2">
+                                                    <div className="flex items-center space-x-2">
+                                                        <FaPhone className="w-4 h-4" />
+                                                        <span className="text-gray-400">01886606001</span>
+                                                    </div>
+                                                    <div className="flex items-center space-x-2">
+                                                        <FaEnvelope className="w-4 h-4" />
+                                                        <span className="text-gray-400">mdshahamanpatwary@gmail.com</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                     </div>
                 </section>
 
@@ -61,35 +53,18 @@ export default function ContactsPage() {
                         <span className="text-purple-400">#</span>all-media
                     </h2>
 
-                    <div className="flex flex-wrap gap-6">
-                        <a
-                            href="https://twitter.com/elias"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-3 text-gray-400 hover:text-purple-400 transition-colors"
-                        >
-                            <FaTwitter className="w-6 h-6" />
-                            <span>@elias</span>
-                        </a>
-                        <a
-                            href="https://twitter.com/elias"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-3 text-gray-400 hover:text-purple-400 transition-colors"
-                        >
-                            <FaTwitter className="w-6 h-6" />
-                            <span>@elias</span>
-                        </a>
-                    </div>
+                    <div className="flex items-center space-x-4 mt-4 md:mt-0">
+                                            <a href="https://github.com/TAIJULAMAN" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                                <FaGithub className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
+                                            </a>
+                                            <a href="https://wa.me/01886606001" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                                <FaWhatsapp className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
+                                            </a>
+                                            <a href="https://www.facebook.com/ShahAmAn04/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                                <FaFacebook className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
+                                            </a>
+                                        </div>
                 </section>
-
-                {/* Decorative elements */}
-                <div className="absolute right-8 bottom-40">
-                    <div className="relative">
-                        <div className="w-16 h-16 border-2 border-purple-400 bg-transparent"></div>
-                        <div className="absolute -top-4 -right-4 w-12 h-12 border-2 border-purple-400 bg-transparent"></div>
-                    </div>
-                </div>
 
                 {/* Bottom decorative dots */}
                 <div className="absolute right-4 bottom-32 grid grid-cols-5 gap-1">

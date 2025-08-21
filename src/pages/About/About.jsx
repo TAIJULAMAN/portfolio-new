@@ -8,17 +8,17 @@ export default function About() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-4">
-                    <p className="text-gray-400">Hello, i'm Aman!</p>
+                    <p className="text-gray-400">Hello, i'm MD SHAH AMAN PATWARY!</p>
 
                     <p className="text-gray-400">
-                        I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites. I specialize in building modern, user-friendly web experiences from the ground up—focusing on clean code, performance, and seamless user interaction.
+                        I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites. Currently, I thrive in my role at SparkTech Agency, where I help create intuitive, engaging interfaces that drive user satisfaction. This role not only honed my technical skills but also broadened my understanding of global standards in web development and the dynamics of remote collaboration.
                     </p>
 
                     <p className="text-gray-400">
                         For over 2 years, I’ve been turning ideas into engaging digital experiences through clean, creative, and responsive web development. I’ve helped clients build their online presence from the ground up, and I’m always exploring the latest technologies and frameworks to stay ahead in the ever-evolving web landscape.
                     </p>
 
-                    <button className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
+                    <button onClick={() => window.location.href = "/about"} className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
                         Read more ~~&gt;
                     </button>
                 </div>

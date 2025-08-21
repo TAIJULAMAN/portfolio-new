@@ -7,7 +7,7 @@ const PROJECTS_DATA = [
         title: "Craft UI",
         description: "Crafty Soft UI—an all-in-one frontend development toolkit, purpose-built to help you ship faster, design smarter, and code better.",
         tech: ["React", "Tailwind CSS"],
-        image: "https://i.ibb.co.com/bM3rKNmc/screencapture-localhost-5174-test-2025-04-22-14-45-28.png",
+        image: "https://ibb.co.com/BHG1tvV8",
         liveUrl: "https://craft-soft-ui.vercel.app/",
         gitUrl: "https://github.com/TAIJULAMAN/Craftysoft-Ui",
     },
@@ -45,7 +45,7 @@ export default function Projects() {
                     <h2 className="text-3xl font-bold">
                         <span className="text-purple-400">#</span>projects
                     </h2>
-                    <a href="#" className="text-white hover:text-purple-400 transition-colors">
+                    <a href="/projects" className="text-white hover:text-purple-400 transition-colors">
                         View all ~~&gt;
                     </a>
                 </div>

@@ -46,7 +46,36 @@ export default function AboutPage() {
         "I am fascinated by AI and machine learning",
         "I love helping others through coding"
     ];
-    
+
+    const experiences = [
+        {
+            role: "Front-end Developer",
+            Type: "Full Time",
+            company: "SparkTech Agency",
+            period: "Jan 2025 — Present",
+            details: [
+                "Build and maintain responsive UI with React and Next",
+                "Collaborate with designers to implement modern, accessible interfaces",
+                "Optimize performance and improve Lighthouse scores",
+                "Optimized component performance and reduced bundle size"
+            ],
+            tech: ["React", "Next.js", "Ant Design", "Redux"]
+        },
+        {
+            role: " Jr. Front-end Developer",
+            Type: "Project Based",
+            company: "Dark Tech",
+            period: "May 2023 — Oct 2024",
+            details: [
+                "Implemented solutions for product features",
+                "Integrated APIs and built reusable components",
+                "Implemented end-to-end product features from spec to release",
+                "Iterated quickly based on client feedback"
+            ],
+            tech: ["Next.js", "Shadcn", "Redux", "Tailwind"]
+        }
+    ];
+
 
     return (
         <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
@@ -59,7 +88,6 @@ export default function AboutPage() {
                     <p className="text-gray-400">Who am I?</p>
                 </div>
 
-                {/* About Me Section */}
                 <section className="mb-20 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
                         <div className="space-y-4">
@@ -112,6 +140,49 @@ export default function AboutPage() {
                                         <div key={skillIndex} className="text-gray-400 text-sm leading-relaxed">
                                             {skill}
                                         </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-20 overflow-hidden">
+                    <h2 className="text-3xl font-bold mb-12">
+                        <span className="text-purple-400">#</span>experience
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-5">
+                        {experiences.map((exp, index) => (
+                            <div
+                                key={index}
+                                className="border border-gray-600 bg-gray-800 p-5 hover:border-purple-400 transition-colors"
+                            >
+                                <div className="flex items-baseline justify-between mb-2">
+                                    <h3 className="font-semibold text-white">{exp.role}</h3>
+                                    <span className="text-gray-400 text-sm">{exp.period}</span>
+                                </div>
+                                <p className="text-purple-300 text-sm mb-3 flex items-center gap-2">
+                                    {exp.company}
+                                    {exp.Type && (
+                                        <span className="text-xs px-2 py-0.5 rounded border border-purple-400/40 text-purple-300 bg-purple-500/10">
+                                            {exp.Type}
+                                        </span>
+                                    )}
+                                </p>
+                                <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm mb-3">
+                                    {exp.details.map((detail, i) => (
+                                        <li key={i}>{detail}</li>
+                                    ))}
+                                </ul>
+                                <div className="flex flex-wrap gap-2">
+                                    {exp.tech.map((t, i) => (
+                                        <span
+                                            key={i}
+                                            className="text-xs px-2 py-1 bg-gray-700 border border-gray-600 rounded text-gray-300"
+                                        >
+                                            {t}
+                                        </span>
                                     ))}
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 import React from "react"
 import { useState, useMemo } from "react"
 import { FaSearch, FaFilter } from "react-icons/fa"
+import { ProjectCard } from "../Projects/ProjectCard"
 
 export default function ProjectsPage() {
     const [searchTerm, setSearchTerm] = useState("")
@@ -8,31 +9,37 @@ export default function ProjectsPage() {
 
     const completeApps = [
         {
-            title: "ChertNodes",
-            description: "Minecraft servers hosting",
-            tech: "HTML SCSS Python Flask",
+            id: 1,
+            title: "Craft UI",
+            type: "library",
+            category: "library",
+            description: "Craft UI—an all-in-one frontend development toolkit, purpose-built to help you ship faster, design smarter, and code better.",
+            tech: ["React", "Tailwind CSS", "Framer Motion"],
+            image: "/craft.png",
+            liveUrl: "https://craft-soft-ui.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/Craftysoft-Ui",
+        },
+        {
+            id: 2,
+            title: "Plate Exchange",
+            type: "web",
             category: "web",
-            image: "/placeholder.svg?height=200&width=300",
-            buttons: [
-                { label: "Live <~>", type: "primary", url: "https://chertnodes.com" },
-                { label: "Cached >", type: "secondary", url: "#" },
-            ],
+            description: "A web application for buying and selling UK number plates. This platform connects buyers and sellers in a secure marketplace environment with premium features and user dashboard functionality.",
+            tech: ["React", "Tailwind CSS", "Redux Toolkit"],
+            image: "/plate.png",
+            liveUrl: "https://plate-exchange-website.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/mandhirhothi-web",
         },
         {
-            title: "Kahoot Answers Viewer",
-            description: "Get answers to your kahoot quiz",
-            tech: "CSS Express Node.js",
-            category: "tool",
-            image: "/placeholder.svg?height=200&width=300",
-            buttons: [{ label: "Live <~>", type: "primary", url: "#" }],
-        },
-        {
-            title: "ProtectX",
-            description: "Discord anti-crash bot",
-            tech: "React Express Discord.js Node.js",
-            category: "bot",
-            image: "/placeholder.svg?height=200&width=300",
-            buttons: [{ label: "Cached >", type: "secondary", url: "#" }],
+            id: 3,
+            title: "Dental Ecommerce",
+            type: "design",
+            category: "design",
+            description: "A modern dental equipment and supplies ecommerce platform. This platform serves dental professionals with a wide range of products, from dental instruments to pharmaceuticals.",
+            tech: ["React", "Tailwind CSS"],
+            image: "/dental.png",
+            liveUrl: "https://dental-ecommerce-website.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/dental-ecommerce-web",
         },
     ]
 
@@ -100,8 +107,8 @@ export default function ProjectsPage() {
     const categories = [
         { value: "all", label: "All" },
         { value: "web", label: "Web" },
-        { value: "app", label: "App" },
-        { value: "design", label: "Design" },
+        { value: "library", label: "library" },
+        { value: "design", label: "design" },
     ]
 
     const filteredCompleteApps = useMemo(() => {
@@ -109,7 +116,7 @@ export default function ProjectsPage() {
             const matchesSearch =
                 project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                project.tech.toLowerCase().includes(searchTerm.toLowerCase())
+                String(Array.isArray(project.tech) ? project.tech.join(" ") : project.tech || "").toLowerCase().includes(searchTerm.toLowerCase())
             const matchesFilter = selectedFilter === "all" || project.category === selectedFilter
             return matchesSearch && matchesFilter
         })
@@ -168,10 +175,6 @@ export default function ProjectsPage() {
                     </div>
                 </div>
 
-                {/* Results Counter */}
-                <div className="mb-6 text-gray-400 text-sm">
-                    Found {filteredCompleteApps.length + filteredSmallProjects.length} projects
-                </div>
 
                 {/* Decorative dots */}
                 <div className="absolute left-4 top-64 grid grid-cols-3 gap-1">
@@ -183,51 +186,28 @@ export default function ProjectsPage() {
                 {/* Complete Apps Section */}
                 {filteredCompleteApps.length > 0 && (
                     <section className="mb-16">
-                        <h2 className="text-3xl font-bold mb-8">
-                            <span className="text-purple-400">#</span>complete-apps
-                        </h2>
-
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filteredCompleteApps.map((project, index) => (
-                                <div
-                                    key={index}
-                                    className="border border-gray-600 bg-gray-800 hover:border-purple-400 transition-colors group"
-                                >
-                                    <div className="relative overflow-hidden">
-                                        <img
-                                            src={project.image || "/placeholder.svg"}
-                                            alt={project.title}
-                                            className="w-full h-48 object-cover bg-gray-700 group-hover:scale-105 transition-transform duration-300"
-                                        />
-                                        <div className="absolute top-2 right-2 bg-gray-900 bg-opacity-75 px-2 py-1 rounded text-xs text-purple-400">
-                                            {project.category}
-                                        </div>
+                            {filteredCompleteApps.map((project, index) => {
+                                const normalized = {
+                                    title: project.title,
+                                    description: project.description,
+                                    tech: Array.isArray(project.tech) ? project.tech : String(project.tech || "").split(" ").filter(Boolean),
+                                    image: project.image || "/placeholder.svg",
+                                    liveUrl: project.liveUrl ?? (project.buttons || []).find(b => /live/i.test(b.label))?.url,
+                                    gitUrl: project.gitUrl ?? (project.buttons || []).find(b => /github/i.test(b.label))?.url,
+                                };
+                                return (
+
+                                    <div key={index} className="relative">
+                                        {project.type && (
+                                            <span className="absolute right-3 top-3 z-10 rounded-full border border-purple-400/30 bg-purple-900 px-3 py-1 text-xs font-medium text-purple-200 backdrop-blur-sm">
+                                                {project.type}
+                                            </span>
+                                        )}
+                                        <ProjectCard project={normalized} />
                                     </div>
-                                    <div className="p-4">
-                                        <div className="text-sm text-gray-400 mb-2">{project.tech}</div>
-                                        <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-gray-400 mb-4">{project.description}</p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.buttons.map((button, btnIndex) => (
-                                                <a
-                                                    key={btnIndex}
-                                                    href={button.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className={`px-4 py-2 text-sm border transition-all duration-200 hover:scale-105 ${button.type === "primary"
-                                                        ? "border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white hover:shadow-lg hover:shadow-purple-400/25"
-                                                        : "border-gray-400 text-gray-400 hover:bg-gray-400 hover:text-black"
-                                                        }`}
-                                                >
-                                                    {button.label}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </section>
                 )}
@@ -244,7 +224,7 @@ export default function ProjectsPage() {
                 {filteredSmallProjects.length > 0 && (
                     <section className="mb-16">
                         <h2 className="text-3xl font-bold mb-8">
-                            <span className="text-purple-400">#</span>small-projects
+                            <span className="text-purple-400">#</span>more-projects
                         </h2>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

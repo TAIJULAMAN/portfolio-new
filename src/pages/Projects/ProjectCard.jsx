@@ -5,7 +5,7 @@ export const ProjectCard = React.memo(({ project }) => {
 
     return (
         <article
-            className="group relative overflow-hidden rounded-xl border border-gray-700 bg-gray-800/50 backdrop-blur-sm transition-all duration-500 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
+            className="group relative overflow-hidden border border-gray-700 bg-gray-800/50 backdrop-blur-sm transition-all duration-500 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
             style={{
                 background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.5) 0%, rgba(17, 24, 39, 0.5) 100%)'
             }}

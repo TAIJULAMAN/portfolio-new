@@ -5,7 +5,8 @@ const PROJECTS_DATA = [
     {
         id: 1,
         title: "Craft UI",
-        description: "Crafty Soft UI—an all-in-one frontend development toolkit, purpose-built to help you ship faster, design smarter, and code better.",
+        type: "library",
+        description: "Craft UI—an all-in-one frontend development toolkit, purpose-built to help you ship faster, design smarter, and code better.",
         tech: ["React", "Tailwind CSS", "Framer Motion"],
         image: "/craft.png",
         liveUrl: "https://craft-soft-ui.vercel.app/",
@@ -13,21 +14,23 @@ const PROJECTS_DATA = [
     },
     {
         id: 2,
-        title: "Flight Ticket System",
-        description: "FTS is an intuitive online platform for booking flight tickets. It allows users to search for flights, compare prices, and easily make reservations, streamlining the travel planning process.",
-        tech: ["Next.js", "Tailwind CSS", "Redux Toolkit", "Express", "Node.js"],
-        image: "https://i.ibb.co.com/9hd7jj2/fts.png",
-        liveUrl: "https://fts-travo.vercel.app/",
-        gitUrl: "https://github.com/TAIJULAMAN/Flight-Ticket-System",
+        title: "Plate Exchange",
+         type: "web",
+        description: "A web application for buying and selling UK number plates. This platform connects buyers and sellers in a secure marketplace environment with premium features and user dashboard functionality.",
+        tech: ["React", "Tailwind CSS", "Redux Toolkit"],
+        image: "/plate.png",
+        liveUrl: "https://plate-exchange-website.vercel.app/",
+        gitUrl: "https://github.com/TAIJULAMAN/mandhirhothi-web",
     },
     {
         id: 3,
-        title: "Ecommerce Web",
-        description: "This e-commerce auction platform offers Pallet, Truckload, and Case products, with options for Auction and Day-wise listings. Users can engage in real-time bidding or purchase products based on daily availability.",
-        tech: ["React", "Tailwind CSS", "Redux Toolkit", "Express", "Node.js"],
-        image: "https://i.ibb.co.com/GncfZkq/ew.png",
-        liveUrl: "https://ecommerce-web-customer-side.vercel.app/",
-        gitUrl: "https://github.com/TAIJULAMAN/EcommerceWeb-customerSide",
+        title: "Dental Ecommerce",
+         type: "design",
+        description: "A modern dental equipment and supplies ecommerce platform. This platform serves dental professionals with a wide range of products, from dental instruments to pharmaceuticals.",
+        tech: ["React", "Tailwind CSS"],
+        image: "/dental.png",
+        liveUrl: "https://dental-ecommerce-website.vercel.app/",
+        gitUrl: "https://github.com/TAIJULAMAN/dental-ecommerce-web",
     },
 ];
 
@@ -51,7 +54,14 @@ export default function Projects() {
                 </div>
                 <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
+                        <div key={project.id} className="relative">
+                            {project.type && (
+                                <span className="absolute right-3 top-3 z-10 rounded-full border border-purple-400/30 bg-purple-900 px-3 py-1 text-xs font-medium text-purple-200 backdrop-blur-sm">
+                                    {project.type}
+                                </span>
+                            )}
+                            <ProjectCard project={project} />
+                        </div>
                     ))}
                 </div>
             </div>

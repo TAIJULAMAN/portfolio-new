@@ -23,7 +23,7 @@ export default function AboutPage() {
         },
         {
             title: "Library",
-            skills: ["React"]
+            skills: ["React", " Redux"],
         }
     ]
     const funFacts = [

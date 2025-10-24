@@ -1,8 +1,6 @@
 import React from "react"
 import { useState, useMemo } from "react"
 import { FaSearch, FaFilter } from "react-icons/fa"
-import Footer from "../shared/Footer"
-import Header from "../shared/Header"
 
 export default function ProjectsPage() {
     const [searchTerm, setSearchTerm] = useState("")
@@ -35,22 +33,6 @@ export default function ProjectsPage() {
             category: "bot",
             image: "/placeholder.svg?height=200&width=300",
             buttons: [{ label: "Cached >", type: "secondary", url: "#" }],
-        },
-        {
-            title: "Kotik Bot",
-            description: "Multi-functional discord bot",
-            tech: "HTML CSS JS",
-            category: "bot",
-            image: "/placeholder.svg?height=200&width=300",
-            buttons: [{ label: "Live <~>", type: "primary", url: "#" }],
-        },
-        {
-            title: "Portfolio",
-            description: "You're using it right now",
-            tech: "Vue TS Less",
-            category: "web",
-            image: "/placeholder.svg?height=200&width=300",
-            buttons: [{ label: "Github <~>", type: "primary", url: "https://github.com/elias/portfolio" }],
         },
     ]
 
@@ -118,11 +100,8 @@ export default function ProjectsPage() {
     const categories = [
         { value: "all", label: "All" },
         { value: "web", label: "Web" },
-        { value: "bot", label: "Bots" },
-        { value: "tool", label: "Tools" },
+        { value: "app", label: "App" },
         { value: "design", label: "Design" },
-        { value: "template", label: "Templates" },
-        { value: "experiment", label: "Experiments" },
     ]
 
     const filteredCompleteApps = useMemo(() => {

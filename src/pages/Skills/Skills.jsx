@@ -23,7 +23,7 @@ export default function Skills() {
         },
         {
             title: "Library",
-            skills: ["React"]
+            skills: ["React", " Redux"],
         }
     ]
     return (

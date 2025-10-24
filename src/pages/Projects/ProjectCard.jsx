@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 export const ProjectCard = React.memo(({ project }) => {
-    const [imageLoaded, setImageLoaded] = React.useState(false);
-    const [imageError, setImageError] = React.useState(false);
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
 
     return (
         <article

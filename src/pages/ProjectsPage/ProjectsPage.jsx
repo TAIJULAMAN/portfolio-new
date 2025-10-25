@@ -45,64 +45,44 @@ export default function ProjectsPage() {
 
     const smallProjects = [
         {
-            title: "Bot boilerplate",
-            description: "Start creating scalable discord.js bot with TypeScript template",
-            tech: "Discord.js TS JS",
-            category: "template",
-            buttons: [{ label: "Github <~>", type: "primary", url: "https://github.com/elias/bot-boilerplate" }],
-        },
-        {
-            title: "My blog",
-            description: "Front-end of my future blog website written on Nuxt",
-            tech: "VUE CSS JS",
-            category: "web",
-            buttons: [{ label: "Github <~>", type: "primary", url: "https://github.com/elias/blog" }],
-        },
-        {
-            title: "Chess pro",
-            description: "Figma landing page about service for viewing chess tournaments",
-            tech: "Figma",
+            id: 1,
+            title: "Saloon Dashboard",
             category: "design",
-            buttons: [{ label: "Figma <~>", type: "primary", url: "https://figma.com/chess-pro" }],
+            description: "A modern saloon based web dashboard for managing customers,services,bookings and transaction.",
+            tech: ["Next.js", "TypeScript"],
+            liveUrl: "https://okjeri-dashboard.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/saloon-dashboard",
         },
         {
-            title: "Crash protect website",
-            description: "Figma template for website about anti-raid, anti-crash discord bot",
-            tech: "Figma",
+            id: 2,
+            title: "Research Website",
             category: "design",
-            buttons: [{ label: "Figma <~>", type: "primary", url: "https://figma.com/crash-protect" }],
+            description: "A website based consulting and R&D firm specializing in energy, climate change, nature-based solutions, blue economy, and AI-powered resilience data analytics.",
+            tech: ["Next.js", "TypeScript"],
+            liveUrl: "https://research-website-mu.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/research-website",
         },
         {
-            title: "CSS experiments",
-            description: "Collection of my different little projects on CSS",
-            tech: "HTML CSS",
-            category: "experiment",
-            buttons: [{ label: "Live <~>", type: "primary", url: "https://codepen.io/elias/css-experiments" }],
-        },
-        {
-            title: "Web Dev nvim config",
-            description: "Config for neovim perfect for web developer",
-            tech: "Lua NeoVim",
-            category: "tool",
-            buttons: [{ label: "Github <~>", type: "primary", url: "https://github.com/elias/nvim-config" }],
-        },
-        {
-            title: "Ooku",
-            description: "Simple link shortener with auth",
-            tech: "Python Quart HTML",
-            category: "tool",
-            buttons: [{ label: "Live <~>", type: "primary", url: "https://ooku.dev" }],
-        },
-        {
-            title: "School website",
-            description: "Figma template website for my school",
-            tech: "Figma",
+            id: 3,
+            title: "FanLnk",
             category: "design",
-            buttons: [{ label: "Figma <~>", type: "primary", url: "https://figma.com/school-website" }],
+            description: "A application designed to facilitate content creation and management.",
+            tech: ["Next.js", "TypeScript"],
+            liveUrl: "https://content-creator-web.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/content-creator-web",
         },
+        {
+            id: 4,
+            title: "jaykou",
+            category: "design",
+            description: "A recipe and meal-planning web app. It features browsing recipes, viewing recipe details, managing a personal profile with favorites and your own recipes.",
+            tech: ["React", "JavaScript", "Radix Ui"],
+            liveUrl: "https://jaykou-website.vercel.app/",
+            gitUrl: "https://github.com/TAIJULAMAN/cook-book-website",
+        },
+
     ]
 
-    // const allProjects = [...completeApps, ...smallProjects]
 
     const categories = [
         { value: "all", label: "All" },
@@ -234,25 +214,50 @@ export default function ProjectsPage() {
                                     className="border border-gray-600 bg-gray-800 p-4 hover:border-purple-400 transition-colors group"
                                 >
                                     <div className="flex justify-between items-start mb-2">
-                                        <div className="text-sm text-gray-400">{project.tech}</div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {(Array.isArray(project.tech) ? project.tech : String(project.tech || "").split(" ").filter(Boolean)).slice(0,3).map((tech, i) => (
+                                                <span key={i} className="rounded-full bg-purple-900/80 px-3 py-1 text-xs font-medium text-purple-200 backdrop-blur-sm">
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                            {!Array.isArray(project.tech) && String(project.tech || "").split(" ").filter(Boolean).length > 3 && (
+                                                <span className="rounded-full bg-purple-900/80 px-3 py-1 text-xs font-medium text-purple-200 backdrop-blur-sm">+ more</span>
+                                            )}
+                                        </div>
                                         <div className="bg-gray-700 px-2 py-1 rounded text-xs text-purple-400">{project.category}</div>
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">
                                         {project.title}
                                     </h3>
                                     <p className="text-gray-400 mb-4">{project.description}</p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.buttons.map((button, btnIndex) => (
+                                    <div className="flex gap-2">
+                                        {project.liveUrl && (
                                             <a
-                                                key={btnIndex}
-                                                href={button.url}
+                                                href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="border border-purple-400 text-purple-400 px-4 py-2 text-sm hover:bg-purple-400 hover:text-white transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-400/25"
+                                                className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-900/50 text-purple-300 transition-all hover:bg-purple-800 hover:text-white"
+                                                aria-label={`View ${project.title} live demo`}
                                             >
-                                                {button.label}
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                                                </svg>
                                             </a>
-                                        ))}
+                                        )}
+                                        {project.gitUrl && (
+                                            <a
+                                                href={project.gitUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-700/50 text-gray-300 transition-all hover:bg-gray-600 hover:text-white"
+                                                aria-label={`View ${project.title} source code`}
+                                            >
+                                                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                                </svg>
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             ))}

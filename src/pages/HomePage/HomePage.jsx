@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from '../shared/Header';
 import Hero from '../Hero/Hero';
 import Quote from '../Quote/Quote';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
-import Footer from '../shared/Footer';
 
 export default function HomePage() {
     return (
@@ -14,9 +12,9 @@ export default function HomePage() {
             <main>
                 <Hero />
                 <Quote />
-                <Projects />
                 <Skills />
                 <About />
+                <Projects />
                 <Contacts />
             </main>
         </div>

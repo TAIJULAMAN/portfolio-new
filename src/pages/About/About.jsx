@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 export default function About() {
     return (
         <section className="container mx-auto px-5 md:px-0 py-10 md:py-16 overflow-hidden">
@@ -6,53 +7,39 @@ export default function About() {
                 <span className="text-purple-400">#</span>about-me
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-4">
-                    <p className="text-gray-400">Hello, i'm MD SHAH AMAN PATWARY!</p>
+            <div className="space-y-8">
+                <p className="text-gray-400 leading-relaxed">
+                    I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites.
+                </p>
 
-                    <p className="text-gray-400">
-                        I'm a self-taught front-end developer based in Dhaka, Bangladesh, passionate about crafting responsive and interactive websites. Currently, I thrive in my role at SparkTech Agency, where I help create intuitive, engaging interfaces that drive user satisfaction. This role not only honed my technical skills but also broadened my understanding of global standards in web development and the dynamics of remote collaboration.
-                    </p>
 
-                    <p className="text-gray-400">
-                        For over 2 years, I’ve been turning ideas into engaging digital experiences through clean, creative, and responsive web development. I’ve helped clients build their online presence from the ground up, and I’m always exploring the latest technologies and frameworks to stay ahead in the ever-evolving web landscape.
-                    </p>
+                {/* Experience Section */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div className="border border-purple-400/30 p-6 rounded-lg hover:border-purple-400 transition-colors">
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <h4 className="text-xl font-semibold text-white">Current Role</h4>
+                        </div>
+                        <p className="text-gray-400">
+                            I thrive in my role at SparkTech Agency, where I help create intuitive, engaging interfaces that drive user satisfaction. This role has honed my technical skills and broadened my understanding of global standards in web development.
+                        </p>
+                    </div>
 
-                    <button onClick={() => window.location.href = "/about"} className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
-                        Read more ~~&gt;
-                    </button>
+                    <div className="border border-purple-400/30 p-6 rounded-lg hover:border-purple-400 transition-colors">
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <h4 className="text-xl font-semibold text-white">Experience</h4>
+                        </div>
+                        <p className="text-gray-400">
+                            For over 2 years, I've been turning ideas into engaging digital experiences through clean, creative, and responsive web development. I'm always exploring the latest technologies and frameworks to stay ahead.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="relative">
-                    {/* Decorative dots */}
-                    <div className="absolute top-0 right-0 grid grid-cols-5 gap-1">
-                        {Array.from({ length: 25 }).map((_, i) => (
-                            <div key={i} className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                        ))}
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 grid grid-cols-5 gap-1">
-                        {Array.from({ length: 25 }).map((_, i) => (
-                            <div key={i} className="w-1 h-1 bg-gray-600 rounded-full"></div>
-                        ))}
-                    </div>
-
-                    {/* Figure illustration */}
-                    <div className="relative">
-                        <div className="relative z-10 flex justify-center">
-                            <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
-                                <img
-                                    src="/aman.jpg"
-                                    alt="Aman's Profile"
-                                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-purple-600 opacity-30 mix-blend-multiply" />
-                                {/* Decorative border and overlay */}
-                                <div className="absolute inset-0 border-4 border-purple-400/20 rounded-2xl m-2 transition-all duration-500 group-hover:border-purple-400/40 group-hover:m-1"></div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex justify-center md:justify-start pt-4">
+                    <Link onClick={() => window.location.href = "/about"} className="border border-purple-400 text-purple-400 px-8 py-3 rounded hover:bg-purple-400 hover:text-white transition-all duration-300 font-medium">
+                        Read more ~~&gt;
+                    </Link>
                 </div>
             </div>
         </section>

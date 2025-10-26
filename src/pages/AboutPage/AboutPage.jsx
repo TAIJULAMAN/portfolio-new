@@ -1,4 +1,7 @@
 import React from "react"
+import aman from "../../assets/aman.webp";
+
+
 export default function AboutPage() {
     const skillCategories = [
         {
@@ -108,7 +111,7 @@ export default function AboutPage() {
                                 <div className="relative z-10 flex justify-center">
                                     <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
                                         <img
-                                            src="/aman.jpg"
+                                            src={aman}
                                             alt="Aman's Profile"
                                             className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
                                         />

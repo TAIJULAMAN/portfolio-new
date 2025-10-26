@@ -3,6 +3,10 @@ import { useState, useMemo } from "react"
 import { FaSearch, FaFilter } from "react-icons/fa"
 import { ProjectCard } from "../Projects/ProjectCard"
 
+import plate from "../../assets/plate.webp";
+import dental from "../../assets/dental.webp";
+import craft from "../../assets/craft.webp";
+
 export default function ProjectsPage() {
     const [searchTerm, setSearchTerm] = useState("")
     const [selectedFilter, setSelectedFilter] = useState("all")
@@ -15,7 +19,7 @@ export default function ProjectsPage() {
             category: "library",
             description: "Craft UI—an all-in-one frontend development toolkit, purpose-built to help you ship faster, design smarter, and code better.",
             tech: ["React", "Tailwind CSS", "Framer Motion"],
-            image: "/craft.png",
+            image: craft,
             liveUrl: "https://craft-soft-ui.vercel.app/",
             gitUrl: "https://github.com/TAIJULAMAN/Craftysoft-Ui",
         },
@@ -26,7 +30,7 @@ export default function ProjectsPage() {
             category: "web",
             description: "A web application for buying and selling UK number plates. This platform connects buyers and sellers in a secure marketplace environment with premium features and user dashboard functionality.",
             tech: ["React", "Tailwind CSS", "Redux Toolkit"],
-            image: "/plate.png",
+            image: plate,
             liveUrl: "https://plate-exchange-website.vercel.app/",
             gitUrl: "https://github.com/TAIJULAMAN/mandhirhothi-web",
         },
@@ -37,7 +41,7 @@ export default function ProjectsPage() {
             category: "design",
             description: "A modern dental equipment and supplies ecommerce platform. This platform serves dental professionals with a wide range of products, from dental instruments to pharmaceuticals.",
             tech: ["React", "Tailwind CSS"],
-            image: "/dental.png",
+            image: dental,
             liveUrl: "https://dental-ecommerce-website.vercel.app/",
             gitUrl: "https://github.com/TAIJULAMAN/dental-ecommerce-web",
         },

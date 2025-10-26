@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 export const ProjectCard = React.memo(({ project }) => {
-    const [imageLoaded, setImageLoaded] = useState(false);
-    const [imageError, setImageError] = useState(false);
 
     return (
         <article
@@ -11,22 +9,12 @@ export const ProjectCard = React.memo(({ project }) => {
             }}
         >
             <div className="relative h-56 overflow-hidden">
-                {!imageLoaded && !imageError && (
-                    <div className="h-full w-full animate-pulse bg-gradient-to-r from-gray-700 via-gray-800 to-gray-700" />
-                )}
                 <img
                     src={project.image}
                     alt={`image of ${project.title}`}
                     loading="lazy"
-                    className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 ${!imageLoaded || imageError ? 'hidden' : 'block'}`}
-                    onLoad={() => setImageLoaded(true)}
-                    onError={() => setImageError(true)}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                {imageError && (
-                    <div className="flex h-full w-full items-center justify-center bg-gray-800">
-                        <span className="text-gray-500">Image not available</span>
-                    </div>
-                )}
                 <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
                     {project.tech.slice(0, 3).map((tech, index) => (
                         <span

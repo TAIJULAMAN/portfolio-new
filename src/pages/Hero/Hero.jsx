@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import aman from "../../assets/aman.webp";
+
 export default function Hero() {
   return (
     <section className="container mx-auto px-5 md:px-0 py-10 md:py-20">
@@ -14,9 +16,6 @@ export default function Hero() {
             I specialize in creating visually stunning, high-performance websites that not only look beautiful but also deliver seamless user experiences. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean, maintainable code and intuitive interfaces that engage users and drive results.
           </p>
 
-          {/* <button onClick={() => window.location.href = "/contacts"} className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
-            Contact me !!
-          </button> */}
           <Link to="/contacts" className="border border-purple-400 text-purple-400 px-6 py-3 hover:bg-purple-400 hover:text-white transition-colors">
             Contact me !!
           </Link>
@@ -26,7 +25,7 @@ export default function Hero() {
           <div className="relative z-10 flex justify-center">
             <div className="relative w-80 h-96 rounded-2xl overflow-hidden group">
               <img
-                src="/aman.jpg"
+                src={aman}
                 alt="Aman's Profile"
                 className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
               />

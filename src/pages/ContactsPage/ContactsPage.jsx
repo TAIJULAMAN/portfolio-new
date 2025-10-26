@@ -3,7 +3,7 @@ import { FaGithub, FaDiscord, FaFigma, FaTwitter, FaEnvelope, FaPhone, FaWhatsap
 
 export default function ContactsPage() {
     return (
-        <div className="min-h-screen bg-gray-900 text-white">
+        <div className="h-[calc(100vh-20rem)] bg-gray-900 text-white">
             <main className="container mx-auto px-4 py-8">
                 {/* Page Header */}
                 <div className="mb-12">
@@ -45,25 +45,6 @@ export default function ContactsPage() {
                                             </div>
                                         </div>
                     </div>
-                </section>
-
-                {/* All Media Section */}
-                <section className="mb-16">
-                    <h2 className="text-3xl font-bold mb-8">
-                        <span className="text-purple-400">#</span>all-media
-                    </h2>
-
-                    <div className="flex items-center space-x-4 mt-4 md:mt-0">
-                                            <a href="https://github.com/TAIJULAMAN" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                                <FaGithub className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
-                                            </a>
-                                            <a href="https://wa.me/01886606001" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                                                <FaWhatsapp className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
-                                            </a>
-                                            <a href="https://www.facebook.com/ShahAmAn04/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                                <FaFacebook className="w-5 h-5 text-purple-400 cursor-pointer transition-colors" />
-                                            </a>
-                                        </div>
                 </section>
 
                 {/* Bottom decorative dots */}

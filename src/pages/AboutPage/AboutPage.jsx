@@ -68,7 +68,7 @@ export default function AboutPage() {
             role: " Jr. Front-end Developer",
             Type: "Project Based",
             company: "Dark Tech",
-            period: "May 2023 — Oct 2024",
+            period: "Sep 2023 — Feb 2025",
             details: [
                 "Implemented solutions for product features",
                 "Integrated APIs and built reusable components",
